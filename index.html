@@ -1,4 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <script src="webpage.js"></script>
+        <title>Choose</title>
+    </head>
+
+<!-- nav bar-->
 <ul>
-    <li><a href="choose.html">Choose For Me</a></li>
-    <li><a href="add.html">Add My Things</a></li>
+    <li><a href="index.html">Choose For Me</a></li>
+    <li><a href="add.html">Add My Options</a></li>
 </ul>
+
+
+<!-- dropdown for options-->
+<div class="dropdown">
+    <button class="dropbtn">What do you need to decide?</button>
+    <div class="dropdown-content">
+      <a class="bgbtn" onclick="toggleBoardGame()">Board Game</a>
+      <a class="resbtn" onclick="toggleRestaurant()">Restaurant</a>
+      <a class="otftbtn" onclick="toggleOutfit()">Outfit</a>
+    </div>
+</div>
+
+<div class="boardgamediv" id="bgdiv">
+    <form>
+        <label for="players">Number of players:</label><br>
+        <input type="text" id="players" name="players"><br>
+        <label for="hours">Time (hours):</label><br>
+        <input type="text" id="hours" name="hours">
+      </form>
+</div>
+
+<div class="restaurantdiv" id="resdiv">
+    <form>
+        <label for="budget">Budget:</label><br>
+        <input type="text" id="budget" name="budget"><br>
+      </form>
+</div>
+
+<div class="outfitdiv" id="otftdiv">
+    <form>
+        <label for="accessories">Accessories (y/n):</label><br>
+        <input type="text" id="accessories" name="accessories"><br>
+        <label for="jacket">Jacket (y/n):</label><br>
+        <input type="text" id="jacket" name="jacket">
+      </form>
+</div>
+
+<button type="choosebtn">Choose</button>
+</html>
