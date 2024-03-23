@@ -9,6 +9,14 @@ class List<Type> {
     this.numOfEntries++;
 }
 
+function isEmpty() {
+    return numOfEntries == 0;
+}
+
+function size(): Number {
+    return numOfEntries;
+}
+
 function remove(entry: Type): Boolean {
     let index = find(entry);
     if (index > -1) {
@@ -52,4 +60,5 @@ function getRandomInt(min, max) {
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
 }
-  
+}
+

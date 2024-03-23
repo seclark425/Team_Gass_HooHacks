@@ -7,10 +7,10 @@
     </head>
 
 <!-- nav bar-->
-<ul>
-    <li><a href="index.html">Choose For Me</a></li>
-    <li><a href="add.html">Add My Options</a></li>
-</ul>
+<div class="topnav">
+    <a href="index.html">Choose For Me</a>
+    <a href="add.html">Add My Options</a>
+</div>
 
 
 <!-- dropdown for options-->
@@ -30,6 +30,8 @@
         <label for="hours">Time (hours):</label><br>
         <input type="text" id="hours" name="hours">
       </form>
+      <button type="choosebtn">Get a game!</button>
+
 </div>
 
 <div class="restaurantdiv" id="resdiv">
@@ -37,16 +39,19 @@
         <label for="budget">Budget:</label><br>
         <input type="text" id="budget" name="budget"><br>
       </form>
+      <button type="choosebtn">Get restaurant!</button>
+
 </div>
 
 <div class="outfitdiv" id="otftdiv">
     <form>
-        <label for="accessories">Accessories (y/n):</label><br>
-        <input type="text" id="accessories" name="accessories"><br>
-        <label for="jacket">Jacket (y/n):</label><br>
-        <input type="text" id="jacket" name="jacket">
+        <label for="accessories">Accessories:</label><br>
+        <input type="checkbox" id="accessories" name="accessories"><br>
+        <label for="jacket">Jacket:</label><br>
+        <input type="checkbox" id="jacket" name="jacket">
       </form>
+      <button type="choosebtn">Generate outfit!</button>
+
 </div>
 
-<button type="choosebtn">Choose</button>
 </html>

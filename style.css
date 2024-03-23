@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* Style The Dropdown Button */
 .dropbtn {
-  background-color: #4c6baf;
+  background-color: #52796F;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -50,7 +50,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: #354F52;
 }
 
 .boardgamediv{
@@ -64,3 +64,41 @@
 .outfitdiv{
   display: none;
 }
+
+.topnav {
+  overflow: hidden;
+  background-color: #EBD8D0;
+  padding: 1em;
+  text-align: center;
+}
+
+.topnav a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 20px;
+}
+
+.topnav a:hover {
+    background-color: #D3AB9E;
+    color: black;
+}
+
+.topnav a:active {
+    background-color: #D3AB9E;
+    color: black;
+}
+
+.topnav .search-container {
+    float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 17px;
+  }
