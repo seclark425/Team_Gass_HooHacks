@@ -233,19 +233,21 @@ const addOutfitBtn = document.getElementById("add-outfit")
 
 const chooseGameBtn = document.querySelector(".bgdiv button");
 
-function addGame() {
-    let players = document.getElementById("players").value;
-    let length = document.getElementById("hours").value;
-    let name = document.getElementById("name").value;
-    let error = document.getElementById("add-error");
-    if ((name == null || name == "") && (length == null || length == "") && (players == null || players == "")) {
-        document.getElementById("add-error").style.display = "block";
-    }
-    else {
-        error.style.display = "none";
-        let game = new Boardgame(players, length, name);
-        gameList.add(game);
-    }
+function addGame(players, length, name) {
+    // let players = document.getElementById("players").value;
+    // let length = document.getElementById("hours").value;
+    // let name = document.getElementById("name").value;
+    // let error = document.getElementById("add-error");
+    // if ((name == null || name == "") && (length == null || length == "") && (players == null || players == "")) {
+    //     document.getElementById("add-error").style.display = "block";
+    // }
+    // else {
+    //     error.style.display = "none";
+    //     let game = new Boardgame(players, length, name);
+    //     gameList.add(game);
+    // }
+    game = new Boardgame(players, length, name);
+    gameList.add(game)
 }
 
 function chooseGame() {
@@ -255,6 +257,9 @@ function chooseGame() {
     if ((players == null || players == "") && (length == null || length == "")) {
         document.getElementById("choose-error").style.display = "block";
     }
+    else if (gameList.isEmpty()) {
+        document.write("Please make sure you have added a boardgame")
+    }
     else {
         error.style.display = "none";
         let game = gameList.getFinalRandom(players, length);
@@ -262,22 +267,4 @@ function chooseGame() {
     }
 }
 
-// const gameBtn = document.getElementById("gamebtn");
-// const resBtn = document.getElementById("resbtn");
-// const otftBtn = document.getElementById("otftbtn");
-// let gameList = new List<Boardgame>("boardgame");
-// let resList = new List<Resturaunt>("resturaunt");
-// while (document.getElementById('bgdiv') != null) {
-//     gameBtn.addEventListener('click', () => {
-//         const players = document.getElementById("players").value;
-//         gameList.getValid(players, length);
-// })
-// }
 
-
-
-// while (resBtn != null) {
-//     resBtn.addEventListener('click', () => {
-//         resList.choose();
-//     })
-// }
