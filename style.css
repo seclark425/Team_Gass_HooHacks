@@ -65,12 +65,12 @@
 }
 
 .outfitdiv{
-    display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     flex-direction: column;
     height: 100vh;
+}
 
 
 #display {
@@ -81,7 +81,7 @@
     background-size: cover;
     border-radius: 10px;
 }
-}
+
 
 
 .topnav {
