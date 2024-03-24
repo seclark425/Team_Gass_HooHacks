@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css" />
-        <script src="webpage.js"></script>
+        <script src="webpage.js" src="list.ts"></script>
         <title>Choose</title>
     </head>
 
@@ -30,7 +30,8 @@
         <label for="hours">Time (hours):</label><br>
         <input type="text" id="hours" name="hours">
       </form>
-      <button type="choosebtn">Get a game!</button>
+      <button type="choosebtn" id="gamebtn">Get a game!</button>
+      <!-- onclick getGame(players, hours)-->
 
 </div>
 
@@ -39,7 +40,7 @@
         <label for="budget">Budget:</label><br>
         <input type="text" id="budget" name="budget"><br>
       </form>
-      <button type="choosebtn">Get restaurant!</button>
+      <button type="choosebtn" id="resbtn">Get restaurant!</button>
 
 </div>
 
@@ -50,7 +51,7 @@
         <label for="jacket">Jacket:</label><br>
         <input type="checkbox" id="jacket" name="jacket">
       </form>
-      <button type="choosebtn">Generate outfit!</button>
+      <button type="choosebtn" id="otftbtn">Generate outfit!</button>
 
 </div>
 
