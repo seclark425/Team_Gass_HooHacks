@@ -1,5 +1,3 @@
-import List from list;
-
 function toggleBoardGame(){
     var res = document.getElementById('resdiv');  
     res.style.display = 'none';
