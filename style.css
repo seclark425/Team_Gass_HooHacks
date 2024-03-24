@@ -93,6 +93,11 @@
     text-align: center;
     margin-top: 10px;
 }
+
+.putoutfit{
+  display:none
+}
+
 #tops{
   position:absolute;
   width: 550px;

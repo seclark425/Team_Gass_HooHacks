@@ -61,7 +61,10 @@ function toggleOutfitOption(){
     otft.style.display = 'block';
 }
 
-
+function getOutfit(){
+    var outfit = document.getElementById('genoutfit');
+    outfit.style.display = 'block';
+}
 
 
 
