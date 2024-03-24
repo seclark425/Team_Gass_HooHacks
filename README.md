@@ -13,3 +13,21 @@ https://codepen.io/sultanmcdoom/pen/XBOyEx
 
 
 https://stashable.wordpress.com/2018/12/30/make-a-dress-up-game-using-javascript-html-and-css/
+
+
+https://fontawesome.com/v4/get-started/
+
+
+https://www.sothebys.com/en/buy/sneakers/_Nike-Air-Jordan-1-Retro-Bred-2001
+
+
+https://www.schuhe-lueke.com/p/ugg-lace-up-boots-green-1116109-sdc-classic-ultra-mini-2527060002/
+
+
+
+https://newstaractive.com/collections/men-1/products/converse-chuck-taylor-high-top-black
+
+
+
+
+https://www.sothebys.com/en/buy/_nike-air-force-1-low-supreme-box-logo-white-or-size-13-be0a
