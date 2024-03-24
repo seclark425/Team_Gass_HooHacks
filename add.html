@@ -12,8 +12,57 @@
   <a href="add.html">Add My Options</a>
 </div>
 
+<<<<<<< HEAD
 <p>Add your options</p>
 <form id="frm1" action="outfit.html">
     <input type="option" ><br>
+=======
+  <!-- dropdown for options-->
+<div class="dropdown">
+  <button class="dropbtn">Add an option:</button>
+  <div class="dropdown-content">
+    <a class="bgoption" onclick="toggleBoardGameOption()">Board Game</a>
+    <a class="rsoption" onclick="toggleRestaurantOption()">Restaurant</a>
+    <a class="otftoption" onclick="toggleOutfitOption()">Clothing Item</a>
+  </div>
+</div>
+
+<div class="boardgameoption" id="bgop">
+  <form>
+      <label for="gamename">Board Game Name:</label><br>
+      <input type="text" id="gamename" name="gamename"><br>
+      <label for="players">Number of players:</label><br>
+      <input type="text" id="players" name="players"><br>
+      <label for="hours">Time (hours):</label><br>
+      <input type="text" id="hours" name="hours">
+    </form>
+
+</div>
+
+<div class="restaurantoption" id="resop">
+  <form>
+      <label for="resname">Restaurant Name:</label><br>
+      <input type="text" id="resname" name="resname"><br>
+      <label for="budget">Budget:</label><br>
+      <input type="text" id="budget" name="budget"><br>
+    </form>
+
+</div>
+
+<div class="outfitoption" id="otftop">
+  <form>
+    <input type="radio" id="top" name="clothingtype" value="TOP">
+    <label for="top">Top</label><br>
+    <input type="radio" id="pants" name="clothingtype" value="PANTS">
+    <label for="pants">Pants</label><br>
+    <input type="radio" id="shoes" name="clothingtype" value="SHOES">
+    <label for="shoes">Shoes</label><br>
+    <input type="radio" id="accessory" name="clothingtype" value="ACCESSORY">
+    <label for="accessory">Accessory</label><br>
+    <input type="radio" id="jacket" name="clothingtype" value="JACKET">
+    <label for="jacket">Jacket</label><br>
+>>>>>>> 2f16e9cc6f222eec71607f71a2189f27ce0ac51a
   </form>
+
+</div>
 </html>

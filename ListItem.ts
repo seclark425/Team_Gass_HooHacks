@@ -1,3 +1,0 @@
-interface ListItem {
-    isValid(): boolean;
-}
