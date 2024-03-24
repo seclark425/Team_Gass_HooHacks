@@ -65,6 +65,10 @@
 }
 
 .outfitdiv{
+<<<<<<< HEAD
+=======
+    display: none;
+>>>>>>> 03d093a85b5f8ed33462a30839698a3f275bd245
     justify-content: center;
     align-items: center;
     gap: 10px;
