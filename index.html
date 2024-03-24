@@ -46,30 +46,29 @@
 </div>
 
 <div class="outfitdiv" id="otftdiv">
-    <form>
+    <!-- <form>
         <label for="accessories">Accessories:</label><br>
         <input type="checkbox" id="accessories" name="accessories"><br>
         <label for="jacket">Jacket:</label><br>
         <input type="checkbox" id="jacket" name="jacket">
-    </form>
+    </form> -->
       <button type="choosebtn">Generate outfit!</button>
       <div id="tops"></div>
       <div id="pants"></div>
-      <div id="jackets"></div>
-      <div id="accessories"></div>
       <div id="shoes"></div>
       <div id="snoopy"></div>
 
 
         </div>
-        <input type="button" value="NEXT" id="nextTop" onclick="nextTop()">
-        <input type="button" value="NEXT" id="nextPant" onclick="nextPant()">
-        <input type="button" value="NEXT" id="nextJacket" onclick="nextJacket()">
-        <input type="button" value="NEXT" id="nextAccessory" onclick="nextAccessory()">
-        <input type="button" value="NEXT" id="nextShoe" onclick="nextShoe()">
+        <i class="fa-solid fa-caret-right" id="topArrowNext" onclick="nextTop()"></i>
+        <i class="fa-solid fa-caret-left" id="topArrowBefore" onclick="previousTop()"></i>
+        <i class="fa-solid fa-caret-right" id="pantArrowNext" onclick="nextPant()"></i>
+        <i class="fa-solid fa-caret-left" id="pantArrowBefore" onclick="previousPant()"></i>
+        <i class="fa-solid fa-caret-right" id="shoeArrowNext" onclick="nextShoe()"></i>
+        <i class="fa-solid fa-caret-left" id="shoeArrowBefore" onclick="previousShoe()"></i>
       </div>
 
-      <script src="js/code.js"></script>
+      <script src="js/outfit.js"></script>
       
 </div>
 
