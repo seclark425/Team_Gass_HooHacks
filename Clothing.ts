@@ -1,4 +1,7 @@
-class Clothing {
+class Clothing implements ListItem {
+
+    type: string;
+    
     constructor(type) {
         this.type = type;
     }
