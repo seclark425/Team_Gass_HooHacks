@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="style.css" />
         <script src="webpage.js" src="list.ts"></script>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <title>Choose</title>
     </head>
 
@@ -50,9 +51,26 @@
         <input type="checkbox" id="accessories" name="accessories"><br>
         <label for="jacket">Jacket:</label><br>
         <input type="checkbox" id="jacket" name="jacket">
-      </form>
+    </form>
       <button type="choosebtn">Generate outfit!</button>
+      <div id="tops"></div>
+      <div id="pants"></div>
+      <div id="jackets"></div>
+      <div id="accessories"></div>
+      <div id="shoes"></div>
+      <div id="snoopy"></div>
 
+
+        </div>
+        <input type="button" value="NEXT" id="nextTop" onclick="nextTop()">
+        <input type="button" value="NEXT" id="nextPant" onclick="nextPant()">
+        <input type="button" value="NEXT" id="nextJacket" onclick="nextJacket()">
+        <input type="button" value="NEXT" id="nextAccessory" onclick="nextAccessory()">
+        <input type="button" value="NEXT" id="nextShoe" onclick="nextShoe()">
+      </div>
+
+      <script src="js/code.js"></script>
+      
 </div>
 
 </html>
