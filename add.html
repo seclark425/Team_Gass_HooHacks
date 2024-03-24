@@ -49,20 +49,82 @@
 </div>
 
 <div class="outfitoption" id="otftop">
-  <form>
-    <input type="radio" id="top" name="clothingtype" value="TOP">
-    <label for="top">Top</label><br>
-    <input type="radio" id="pants" name="clothingtype" value="PANTS">
-    <label for="pants">Pants</label><br>
-    <input type="radio" id="shoes" name="clothingtype" value="SHOES">
-    <label for="shoes">Shoes</label><br>
-    <input type="radio" id="accessory" name="clothingtype" value="ACCESSORY">
-    <label for="accessory">Accessory</label><br>
-    <input type="radio" id="jacket" name="clothingtype" value="JACKET">
-    <label for="jacket">Jacket</label><br>
-    <button id="add-outfit" onclick="addOutfit()"></button>
+  <body>
+    <label for="tops">Upload photos of your tops</label>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input 
+        type="file" 
+        id="tops" 
+        name="tops[]" 
+        accept=".jpg, .jpeg, .png">
+        <img id="topsOutput">
+    </form>
 
-  </form>
+    <label for="pants">Upload photos of your pants</label>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input 
+        type="file" 
+        id="pants" 
+        name="pants[]" 
+        accept=".jpg, .jpeg, .png">
+    <img id="pantsOutput">
+    </form>
+
+    <label for="jackets">Upload photos of your jackets</label>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input 
+        type="file" 
+        id="jackets" 
+        name="jackets[]" 
+        accept=".jpg, .jpeg, .png">
+    <img id="jacketsOutput">
+    </form>
+    <button type="button" id="uploadButton">Upload Files</button>
+
+   
+    <script>
+        const uploadButton = document.getElementById("uploadButton");
+        uploadButton.addEventListener("click", uploadFiles);
+        function uploadFiles(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById("jackets[]");
+            const selectedFiles = fileInput.files;
+        }
+        function uploadFiles() {
+            const formData = new FormData();
+            for (let i = 0; i < selectedFiles.length; i++) {
+                formData.append("jackets[]", selectedFiles[i]);
+            }
+}
+
+        const uploadButton1 = document.getElementById("uploadButton1");
+        uploadButton1.addEventListener("click", uploadFiles);
+        function uploadFiles(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById("tops[]");
+            const selectedFiles = fileInput.files;
+        }
+        function uploadFiles() {
+            const formData = new FormData();
+            for (let i = 0; i < selectedFiles.length; i++) {
+                formData.append("tops[]", selectedFiles[i]);
+            }
+}
+        const uploadButton2 = document.getElementById("uploadButton2");
+        uploadButton2.addEventListener("click", uploadFiles);
+        function uploadFiles(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById("pants[]");
+            const selectedFiles = fileInput.files;
+        }
+        function uploadFiles() {
+            const formData = new FormData();    
+            for (let i = 0; i < selectedFiles.length; i++) {
+                formData.append("pants[]", selectedFiles[i]);
+            }
+}
+        </script>
+</body>
 
 <p id="add-error">Please fill out all fields completely</p>
 
