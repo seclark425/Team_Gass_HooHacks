@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="style.css" />
   <script src="webpage.js"></script>
+  <script src="ListContainers.js"></script>
   <title>Add Options</title>
 </head>
 
@@ -31,7 +32,7 @@
       <input type="text" id="players" name="players"><br>
       <label for="hours">Time (hours):</label><br>
       <input type="text" id="hours" name="hours"><br>
-      <button id="add-game">Add Game</button>
+      <button id="add-game" onclick="addGame()">Add Game</button>
     </form>
 
   </div>
@@ -42,7 +43,7 @@
       <input type="text" id="resname" name="resname"><br>
       <label for="budget">Budget:</label><br>
       <input type="text" id="budget" name="budget"><br>
-      <button id="add-resturaunt">Add Restaurant</button>
+      <button id="add-resturaunt" onclick="addRes()">Add Restaurant</button>
     </form>
 
 </div>
@@ -59,7 +60,7 @@
     <label for="accessory">Accessory</label><br>
     <input type="radio" id="jacket" name="clothingtype" value="JACKET">
     <label for="jacket">Jacket</label><br>
-    <button id="add-outfit"></button>
+    <button id="add-outfit" onclick="addOutfit()"></button>
 
   </form>
 

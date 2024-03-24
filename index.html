@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css" />
-        <script src="webpage.js" src="list.ts"></script>
+        <script src="webpage.js"></script>
+        <script src="ListContainers.js"></script>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <title>Choose</title>
     </head>
@@ -40,7 +41,7 @@
         <label for="budget">Budget:</label><br>
         <input type="text" id="budget" name="budget"><br>
       </form>
-      <button type="choosebtn">Get restaurant!</button>
+      <button type="choosebtn" onclick="chooseRes()">Get restaurant!</button>
 
 </div>
 
@@ -72,4 +73,6 @@
 </div>
 
 <p id="choose-error">Please fill out all fields completely</p>
+<p id="wingspan">Wingspan, 5 players, 1.15 hrs</p>
+<p id="olive-garden">Olive Garden, $20</p>
 </html>
