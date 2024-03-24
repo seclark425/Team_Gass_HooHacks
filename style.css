@@ -74,17 +74,6 @@
 }
 
 
-#display {
-    width: 375px;
-    height: 211px;
-    border: 1px solid black;
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-}
-
-
-
 .topnav {
   overflow: hidden;
   background-color: #EBD8D0;
