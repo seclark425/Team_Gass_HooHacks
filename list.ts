@@ -1,23 +1,20 @@
 class List<Type> {
-    constructor() {
+    constructor(type: String) {
         this.contents = [];
         this.numOfEntries = 0;
+        this.type = type;
     }
 
-    function add(newEntry: Type) {
+    getContents() {
+        return this.contents;
+    }
+    
+    add(newEntry: Type) {
     contents[numOfEntries] = newEntry;
     this.numOfEntries++;
-}
+    }
 
-function isEmpty() {
-    return numOfEntries == 0;
-}
-
-function size(): Number {
-    return numOfEntries;
-}
-
-function remove(entry: Type): Boolean {
+    remove(entry: Type): Boolean {
     let index = find(entry);
     if (index > -1) {
         for (let i = index; i < this.numOfEntries - 1; i++) {
@@ -61,4 +58,3 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
 }
 }
-

@@ -1,16 +1,17 @@
 class Boardgame {
-    constructor(players: Number, gameLength: Number, gameComplexity: Number) {
+    constructor(players, gameLength, gameComplexity) {
         this.length = gameLength;
         this.numPlayers = players;
         this.complexity = gameComplexity;
+        this.name = gameName
     }
-    function setNumPlayers(players: Number) {
-    this.numPlayers = players;
-}
+    setNumPlayers(players) {
+        this.numPlayers = players;
+    }
 
-function setLength(gameLength: Number) {
-    this.length = gameLength;
-}
+    setLength(gameLength) {
+        this.length = gameLength;
+    }
 
 function setComplexity(gameComplexity: Number) {
     this.complexity = gameComplexity;
