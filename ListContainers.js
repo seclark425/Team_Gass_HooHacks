@@ -1,16 +1,11 @@
 class BoardgameList {
 
-    contents: Array<Boardgame>;
-    numOfEntries: number;
-    type: String;
-
-    constructor(type: String) {
+    constructor() {
         this.contents = [];
         this.numOfEntries = 0;
-        this.type = type;
     }
 
-    getContents(): Array<Boardgame> {
+    getContents() {
         return this.contents;
     }
 
@@ -18,12 +13,12 @@ class BoardgameList {
         return this.numOfEntries;
     }
 
-    add(newEntry: Boardgame) {
+    add(newEntry) {
         this.getContents()[this.numOfEntries] = newEntry;
         this.numOfEntries++;
     }
 
-    remove(entry: Boardgame): boolean {
+    remove(entry) {
         let index = this.find(entry);
         if (index > -1) {
             for (let i = index; i < this.numOfEntries - 1; i++) {
@@ -35,7 +30,7 @@ class BoardgameList {
         return false;
     }
 
-    find(entry: Boardgame): number {
+    find(entry) {
         for (let i = 0; i < this.numOfEntries; i++) {
             if (this.contents[i] == entry) {
                 return i;
@@ -44,8 +39,8 @@ class BoardgameList {
         return -1;
     }
 
-    private getValidArr(players: number, length: number) {
-        let validArr: Boardgame[] = [];
+    getValidArr(players, length) {
+        let validArr = [];
         let count = 0;
         for (let i = 0; i < this.numOfEntries; i++) {
             if (this.contents[i].getNumPlayers() == players, length && this.contents[i].getLength() == length) {
@@ -56,18 +51,18 @@ class BoardgameList {
         return validArr;
     }
 
-    private chooseRandom(arr: Array<Boardgame>) {
+    chooseRandom(arr) {
         let index = this.getRandomInt(0, this.numOfEntries);
         return arr[index];
     }
 
-    private getRandomInt(min, max) {
+    getRandomInt(min, max) {
         const minCeiled = Math.ceil(min);
         const maxFloored = Math.floor(max);
         return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
     }
 
-    getFinalRandom(players: number, length: number): Boardgame {
+    getFinalRandom(players, length) {
         let validArr = this.getValidArr(players, length);
         return this.chooseRandom(validArr);
     }
@@ -75,17 +70,15 @@ class BoardgameList {
 
 class ResturauntList {
 
-    contents: Array<Resturaunt>;
-    numOfEntries: number;
-    type: String;
+    contents;
+    numOfEntries;
 
-    constructor(type: String) {
+    constructor() {
         this.contents = [];
         this.numOfEntries = 0;
-        this.type = type;
     }
 
-    getContents(): Array<Resturaunt> {
+    getContents() {
         return this.contents;
     }
 
@@ -93,12 +86,12 @@ class ResturauntList {
         return this.numOfEntries;
     }
 
-    add(newEntry: Resturaunt) {
+    add(newEntry) {
         this.getContents()[this.numOfEntries] = newEntry;
         this.numOfEntries++;
     }
 
-    remove(entry: Resturaunt): Boolean {
+    remove(entry) {
         let index = this.find(entry);
         if (index > -1) {
             for (let i = index; i < this.numOfEntries - 1; i++) {
@@ -110,7 +103,7 @@ class ResturauntList {
         return false;
     }
 
-    find(entry: Resturaunt): number {
+    find(entry) {
         for (let i = 0; i < this.numOfEntries; i++) {
             if (this.contents[i] == entry) {
                 return i;
@@ -120,8 +113,8 @@ class ResturauntList {
     }
 
 
-    private getValidArr(price: number, type: string) {
-        let validArr: Resturaunt[] = [];
+    getValidArr(price, type) {
+        let validArr = [];
         let count = 0;
         for (let i = 0; i < this.numOfEntries; i++) {
             if (this.contents[i].getPrice() == price && this.contents[i].getType() == type) {
@@ -132,7 +125,7 @@ class ResturauntList {
         return validArr;
     }
 
-    chooseRandom(arr: Array<Resturaunt>) {
+    chooseRandom(arr) {
         let index = this.getRandomInt(0, this.numOfEntries);
         return arr[index];
     }
@@ -143,7 +136,7 @@ class ResturauntList {
         return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
     }
 
-    getFinalRandom(price: number, type: string): Resturaunt {
+    getFinalRandom(price, type) {
         let validArr = this.getValidArr(price, type);
         return this.chooseRandom(validArr);
     }
@@ -151,10 +144,6 @@ class ResturauntList {
 
 
 class Boardgame {
-
-    length: number;
-    numPlayers: number;
-    name: string;
 
     constructor(players, gameLength, gameName) {
         this.length = gameLength;
@@ -165,7 +154,7 @@ class Boardgame {
         this.numPlayers = players;
     }
 
-    getNumPlayers(): number {
+    getNumPlayers() {
         return this.numPlayers;
     }
 
@@ -173,7 +162,7 @@ class Boardgame {
         this.length = gameLength;
     }
 
-    getLength(): number {
+    getLength() {
         return this.length;
     }
 
@@ -181,15 +170,13 @@ class Boardgame {
         this.name = gameName;
     }
 
-    getName(): string {
+    getName() {
         return this.name;
     }
     
 }
 
 class Clothing {
-
-    type: string;
 
     constructor(type) {
         this.type = type;
@@ -205,45 +192,47 @@ class Clothing {
 }
 
 class Resturaunt {
-    type: string; //type of food, such as mediterranian, asian, etc.
-    price: number; //rating of price out of 3, with 1 being the least expensive
-    name: string;
-
+    
     constructor(name, type, price) {
         this.type = type;
-        this.price = price;
+        this.price = price; //scale of 1-3, 1 being the cheapest
         this.name = name;
     }
 
-    getType(): string {
+    getType() {
         return this.type;
     }
 
-    setType(type: string) {
+    setType(type) {
         this.type = type;
     }
 
-    getPrice(): number {
+    getPrice() {
         return this.price;
     }
 
-    setPrice(price: number) {
+    setPrice(price) {
         this.price = price;
     }
 
-    getName(): string {
+    getName() {
         return this.name;
     }
 
-    setName(name: string) {
+    setName(name) {
         this.name = name;
     }
 }
 
+let gameList = new BoardgameList();
+let resList = new ResturauntList();
 const addGameBtn = document.getElementById("add-game");
 const addResBtn = document.querySelector(".resturauntoption button");
 const addOutfitBtn = document.querySelector("add-outfit")
-addGameBtn.addEventListener
+addGameBtn.addEventListener('click', () => {
+    let numPlayers = document.getElementById("gamename").value;
+    let game = new Boardgame()
+})
 
 
 // const gameBtn = document.getElementById("gamebtn");
