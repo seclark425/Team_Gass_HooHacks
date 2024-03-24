@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="style.css" />
         <script src="webpage.js" src="list.ts"></script>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <title>Choose</title>
     </head>
 
@@ -44,14 +45,30 @@
 </div>
 
 <div class="outfitdiv" id="otftdiv">
-    <form>
+    <!-- <form>
         <label for="accessories">Accessories:</label><br>
         <input type="checkbox" id="accessories" name="accessories"><br>
         <label for="jacket">Jacket:</label><br>
         <input type="checkbox" id="jacket" name="jacket">
-      </form>
+    </form> -->
       <button type="choosebtn">Generate outfit!</button>
+      <div id="tops"></div>
+      <div id="pants"></div>
+      <div id="shoes"></div>
+      <div id="snoopy"></div>
 
+
+        </div>
+        <i class="fa-solid fa-caret-right" id="topArrowNext" onclick="nextTop()"></i>
+        <i class="fa-solid fa-caret-left" id="topArrowBefore" onclick="previousTop()"></i>
+        <i class="fa-solid fa-caret-right" id="pantArrowNext" onclick="nextPant()"></i>
+        <i class="fa-solid fa-caret-left" id="pantArrowBefore" onclick="previousPant()"></i>
+        <i class="fa-solid fa-caret-right" id="shoeArrowNext" onclick="nextShoe()"></i>
+        <i class="fa-solid fa-caret-left" id="shoeArrowBefore" onclick="previousShoe()"></i>
+      </div>
+
+      <script src="js/outfit.js"></script>
+      
 </div>
 
 <p id="choose-error">Please fill out all fields completely</p>

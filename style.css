@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('/font-awesome-4.6.3/css/font-awesome.min.css');
 /* Style The Dropdown Button */
 .dropbtn {
   text-align: center;
@@ -91,6 +92,24 @@
     display: none;
     text-align: center;
     margin-top: 10px;
+}
+#tops{
+  position:absolute;
+}
+#pants{
+  position:absolute;
+}
+#jackets{
+  position:absolute;
+}
+#shoes{
+  position:absolute;
+}
+#accessories{
+  position:absolute;
+}
+#snoopy{
+  position:absolute;
 }
 
 
