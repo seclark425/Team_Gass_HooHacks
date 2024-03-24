@@ -7,37 +7,79 @@
 </head>
 <body>
     <label for="tops">Upload photos of your tops</label>
-    <input 
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input 
         type="file" 
         id="tops" 
-        name="tops" 
-        accept=".jpg, .jpeg, .png"
-        onchange="loadFile(event)" style="display: none;">
-    <img id="topsOutput">
+        name="tops[]" 
+        accept=".jpg, .jpeg, .png">
+        <button type="button" id="uploadButton1">Upload Files</button>
+        <img id="topsOutput">
+    </form>
 
     <label for="pants">Upload photos of your pants</label>
-    <input 
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input 
         type="file" 
         id="pants" 
-        name="pants" 
-        accept=".jpg, .jpeg, .png"
-        onchange="loadFile(event)" style="display: none;">
+        name="pants[]" 
+        accept=".jpg, .jpeg, .png">
+        <button type="button" id="uploadButton2">Upload Files</button>
     <img id="pantsOutput">
+    </form>
 
     <label for="jackets">Upload photos of your jackets</label>
-    <input 
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input 
         type="file" 
         id="jackets" 
-        name="jackets" 
-        accept=".jpg, .jpeg, .png"
-        onchange="loadFile(event)">
+        name="jackets[]" 
+        accept=".jpg, .jpeg, .png">
+        <button type="button" id="uploadButton">Upload Files</button>
     <img id="jacketsOutput">
+    </form>
    
     <script>
-        var loadFile = function(event) {
-            var image = document.getElementById('jacketsOutput');
-            image.src = URL.createObjectURL(event.target.files[0]);
-        };
+        const uploadButton = document.getElementById("uploadButton");
+        uploadButton.addEventListener("click", uploadFiles);
+        function uploadFiles(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById("jackets[]");
+            const selectedFiles = fileInput.files;
+        }
+        function uploadFiles() {
+            const formData = new FormData();
+            for (let i = 0; i < selectedFiles.length; i++) {
+                formData.append("jackets[]", selectedFiles[i]);
+            }
+}
+
+        const uploadButton1 = document.getElementById("uploadButton1");
+        uploadButton1.addEventListener("click", uploadFiles);
+        function uploadFiles(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById("tops[]");
+            const selectedFiles = fileInput.files;
+        }
+        function uploadFiles() {
+            const formData = new FormData();
+            for (let i = 0; i < selectedFiles.length; i++) {
+                formData.append("tops[]", selectedFiles[i]);
+            }
+}
+        const uploadButton2 = document.getElementById("uploadButton2");
+        uploadButton2.addEventListener("click", uploadFiles);
+        function uploadFiles(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById("pants[]");
+            const selectedFiles = fileInput.files;
+        }
+        function uploadFiles() {
+            const formData = new FormData();    
+            for (let i = 0; i < selectedFiles.length; i++) {
+                formData.append("pants[]", selectedFiles[i]);
+            }
+}
         </script>
 </body>
 </html>
