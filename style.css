@@ -71,7 +71,7 @@
     gap: 10px;
     flex-direction: column;
     height: 100vh;
-
+}
 
 #display {
     width: 375px;
@@ -81,7 +81,7 @@
     background-size: cover;
     border-radius: 10px;
 }
-}
+
 
 
 .topnav {
