@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="style.css" />
-        <script src="webpage.js"></script>
-        <title>Choose</title>
-    </head>
-<html>
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="webpage.js"></script>
+    <title>Choose</title>
+</head>
+<body>
     <label for="tops">Upload photos of your tops</label>
-    <input
-        type="file"
-        id="tops"
-        name="tops"
-        accept=".jpg, .jpeg, .png">
+    <input 
+        type="file" 
+        id="tops" 
+        name="tops" 
+        accept=".jpg, .jpeg, .png"
+        onchange="loadFile(event)" style="display: none;">
+    <img id="topsOutput">
+
     <label for="pants">Upload photos of your pants</label>
-    <input
-        type="file"
-        id="pants"
-        name="pants"
-        accept=".jpg, .jpeg, .png">
-    <label for="tops">Upload photos of your jackets</label>
-    <input
-        type="file"
-        id="jackets"
-        name="jackets"
-        accept=".jpg, .jpeg, .png">
+    <input 
+        type="file" 
+        id="pants" 
+        name="pants" 
+        accept=".jpg, .jpeg, .png"
+        onchange="loadFile(event)" style="display: none;">
+    <div id="display"></div>
+    <img id="pantsOutput">
+
+    <label for="jackets">Upload photos of your jackets</label>
+    <input 
+        type="file" 
+        id="jackets" 
+        name="jackets" 
+        accept=".jpg, .jpeg, .png"
+        onchange="loadFile(event)" style="display: none;">
+    <div id="display"></div>
+    <img id="jacketsOutput">
+   
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+        </script>
+</body>
 </html>
