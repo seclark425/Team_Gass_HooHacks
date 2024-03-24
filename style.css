@@ -95,8 +95,17 @@
 }
 #tops{
   position:absolute;
+  width: 550px;
+  height: 750px;
 }
 .top1{
+  position:absolute;
+  position:absolute;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  width: 50%;
+  background-image:url(../images/IMG2104.jpg);
   position:absolute;
 
 }
@@ -104,18 +113,26 @@
   position:absolute;
 
 }
-.top3{
+/* .top3{
   position:absolute;
 
 }
 .top4{
   position:absolute;
 
-}
+} */
 #pants{
   position:absolute;
+  width: 550px;
+  height: 750px;
 }
 .pant1{
+  position:absolute;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  width: 50%;
+  background-image:url(../images/IMG2105.jpg);
   position:absolute;
 
 }
@@ -123,18 +140,25 @@
   position:absolute;
 
 }
-.pant3{
+/* .pant3{
   position:absolute;
 
 }
 .pant4{
   position:absolute;
 
-}
+} */
 #shoes{
   position:absolute;
+  width: 550px;
+  height: 750px;
 }
 .shoe1{
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  width: 50%;
+  background-image:url(../images/shoe1.png);
   position:absolute;
 
 }
@@ -142,7 +166,7 @@
   position:absolute;
 
 }
-.shoe3{
+/* .shoe3{
   position:absolute;
 
 }
@@ -152,7 +176,7 @@
 }
 #snoopy{
   position:absolute;
-}
+} */
 
 
 .topnav {
