@@ -173,7 +173,7 @@ class Boardgame {
     getName() {
         return this.name;
     }
-    
+
 }
 
 class Clothing {
@@ -192,7 +192,7 @@ class Clothing {
 }
 
 class Resturaunt {
-    
+
     constructor(name, type, price) {
         this.type = type;
         this.price = price; //scale of 1-3, 1 being the cheapest
@@ -226,14 +226,41 @@ class Resturaunt {
 
 let gameList = new BoardgameList();
 let resList = new ResturauntList();
+
 const addGameBtn = document.getElementById("add-game");
 const addResBtn = document.querySelector(".resturauntoption button");
-const addOutfitBtn = document.querySelector("add-outfit")
-addGameBtn.addEventListener('click', () => {
-    let numPlayers = document.getElementById("gamename").value;
-    let game = new Boardgame()
-})
+const addOutfitBtn = document.getElementById("add-outfit")
 
+const chooseGameBtn = document.querySelector(".bgdiv button");
+
+function addGame() {
+    let players = document.getElementById("players").value;
+    let length = document.getElementById("hours").value;
+    let name = document.getElementById("name").value;
+    let error = document.getElementById("add-error");
+    if ((name == null || name == "") && (length == null || length == "") && (players == null || players == "")) {
+        document.getElementById("add-error").style.display = "block";
+    }
+    else {
+        error.style.display = "none";
+        let game = new Boardgame(players, length, name);
+        gameList.add(game);
+    }
+}
+
+function chooseGame() {
+    let players = document.getElementById("players").value;
+    let length = document.getElementById("hours").value;
+    let error = document.getElementById("choose-error");
+    if ((players == null || players == "") && (length == null || length == "")) {
+        document.getElementById("choose-error").style.display = "block";
+    }
+    else {
+        error.style.display = "none";
+        let game = gameList.getFinalRandom(players, length);
+        document.write(game.getName());
+    }
+}
 
 // const gameBtn = document.getElementById("gamebtn");
 // const resBtn = document.getElementById("resbtn");
