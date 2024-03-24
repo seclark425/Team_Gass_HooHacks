@@ -160,3 +160,11 @@
   text-align: center;
   margin-top: 10px;
 }
+
+#choose-error, #add-error {
+  text-align: center;
+  color: red;
+  text-decoration: underline;
+  text-decoration-color: red;
+  display: none;
+}
