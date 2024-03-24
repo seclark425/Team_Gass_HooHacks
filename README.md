@@ -11,5 +11,5 @@ https://blog.filestack.com/html-image-guide-html-image-uploader/
 
 https://codepen.io/sultanmcdoom/pen/XBOyEx
 
-
+https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
 https://stashable.wordpress.com/2018/12/30/make-a-dress-up-game-using-javascript-html-and-css/
