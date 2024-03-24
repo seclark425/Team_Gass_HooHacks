@@ -5,6 +5,9 @@ function toggleBoardGame(){
     otft.style.display = 'none';
     var bg = document.getElementById('bgdiv');  
     bg.style.display = 'block';
+
+    document.getElementById("olive-garden").style.display = "none";
+    document.getElementById('choose-error').style.display = "none";
 }
 
 function toggleRestaurant(){
@@ -14,6 +17,8 @@ function toggleRestaurant(){
     bg.style.display = 'none';
     var res = document.getElementById('resdiv');  
     res.style.display = 'block';
+    document.getElementById('wingspan').style.display = "none";
+    document.getElementById('choose-error').style.display = "none";
 }
 
 function toggleOutfit(){
@@ -23,6 +28,9 @@ function toggleOutfit(){
     bg.style.display = 'none';
     var otft = document.getElementById('otftdiv');  
     otft.style.display = 'block';
+    document.getElementById('wingspan').style.display = "none";
+    document.getElementById("olive-garden").style.display = "none";
+    document.getElementById('choose-error').style.display = "none";
 }
 
 function toggleBoardGameOption(){
@@ -41,6 +49,7 @@ function toggleRestaurantOption(){
     bg.style.display = 'none';
     var res = document.getElementById('resop');  
     res.style.display = 'block';
+    
 }
 
 function toggleOutfitOption(){
@@ -51,3 +60,9 @@ function toggleOutfitOption(){
     var otft = document.getElementById('otftop');  
     otft.style.display = 'block';
 }
+
+
+
+
+
+

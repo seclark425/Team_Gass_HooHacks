@@ -43,7 +43,7 @@ class BoardgameList {
         let validArr = [];
         let count = 0;
         for (let i = 0; i < this.numOfEntries; i++) {
-            if (this.contents[i].getNumPlayers() == players, length && this.contents[i].getLength() == length) {
+            if (this.contents[i].getNumPlayers() >= players && this.contents[i].getLength() <= length) {
                 validArr[count] = this.contents[i];
                 count++;
             }
@@ -117,7 +117,7 @@ class ResturauntList {
         let validArr = [];
         let count = 0;
         for (let i = 0; i < this.numOfEntries; i++) {
-            if (this.contents[i].getPrice() == price && this.contents[i].getType() == type) {
+            if (this.contents[i].getPrice() <= price) {
                 validArr[count] = this.contents[i];
                 count++;
             }
@@ -224,8 +224,9 @@ class Resturaunt {
     }
 }
 
-let gameList = new BoardgameList();
-let resList = new ResturauntList();
+const gameList = new BoardgameList();
+const resList = new ResturauntList();
+
 
 const addGameBtn = document.getElementById("add-game");
 const addResBtn = document.querySelector(".resturauntoption button");
@@ -234,50 +235,47 @@ const addOutfitBtn = document.getElementById("add-outfit")
 const chooseGameBtn = document.querySelector(".bgdiv button");
 
 function addGame() {
-    let players = document.getElementById("players").value;
-    let length = document.getElementById("hours").value;
-    let name = document.getElementById("name").value;
-    let error = document.getElementById("add-error");
-    if ((name == null || name == "") && (length == null || length == "") && (players == null || players == "")) {
-        document.getElementById("add-error").style.display = "block";
-    }
-    else {
-        error.style.display = "none";
-        let game = new Boardgame(players, length, name);
-        gameList.add(game);
-    }
+    // let players = document.getElementById("players").value;
+    // let length = document.getElementById("hours").value;
+    // let name = document.getElementById("name").value;
+    // let error = document.getElementById("add-error");
+    // if ((name == null || name == "") && (length == null || length == "") && (players == null || players == "")) {
+    //     document.getElementById("add-error").style.display = "block";
+    // }
+    // else {
+    //     error.style.display = "none";
+    //     let game = new Boardgame(players, length, name);
+    //     gameList.add(game);
+    //     document.write(game.getName());
+    // }
+    
 }
 
 function chooseGame() {
     let players = document.getElementById("players").value;
     let length = document.getElementById("hours").value;
     let error = document.getElementById("choose-error");
+    let wingspan = document.getElementById("wingspan");
     if ((players == null || players == "") && (length == null || length == "")) {
-        document.getElementById("choose-error").style.display = "block";
+        error.style.display = "block";
     }
     else {
         error.style.display = "none";
+        wingspan.style.display = "block";
         let game = gameList.getFinalRandom(players, length);
         document.write(game.getName());
     }
 }
 
-// const gameBtn = document.getElementById("gamebtn");
-// const resBtn = document.getElementById("resbtn");
-// const otftBtn = document.getElementById("otftbtn");
-// let gameList = new List<Boardgame>("boardgame");
-// let resList = new List<Resturaunt>("resturaunt");
-// while (document.getElementById('bgdiv') != null) {
-//     gameBtn.addEventListener('click', () => {
-//         const players = document.getElementById("players").value;
-//         gameList.getValid(players, length);
-// })
-// }
-
-
-
-// while (resBtn != null) {
-//     resBtn.addEventListener('click', () => {
-//         resList.choose();
-//     })
-// }
+function chooseRes() {
+    let budget = document.getElementById("budget").value;
+    let error = document.getElementById("choose-error");
+    let oliveGardern = document.getElementById("olive-garden");
+    if ((budget == null || budget == "")) {
+        error.style.display = "block";
+    }
+    else {
+        error.style.display = "none";
+        oliveGardern.style.display = "block";
+    }
+}
