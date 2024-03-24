@@ -10,3 +10,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 https://blog.filestack.com/html-image-guide-html-image-uploader/
 
 https://codepen.io/sultanmcdoom/pen/XBOyEx
+
+
+https://stashable.wordpress.com/2018/12/30/make-a-dress-up-game-using-javascript-html-and-css/
