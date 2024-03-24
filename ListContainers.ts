@@ -240,7 +240,10 @@ class Resturaunt {
     }
 }
 
-
+const addGameBtn = document.getElementById("add-game");
+const addResBtn = document.querySelector(".resturauntoption button");
+const addOutfitBtn = document.querySelector("add-outfit")
+addGameBtn.addEventListener
 
 
 // const gameBtn = document.getElementById("gamebtn");
