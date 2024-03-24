@@ -22,7 +22,6 @@
         name="pants" 
         accept=".jpg, .jpeg, .png"
         onchange="loadFile(event)" style="display: none;">
-    <div id="display"></div>
     <img id="pantsOutput">
 
     <label for="jackets">Upload photos of your jackets</label>
@@ -31,13 +30,12 @@
         id="jackets" 
         name="jackets" 
         accept=".jpg, .jpeg, .png"
-        onchange="loadFile(event)" style="display: none;">
-    <div id="display"></div>
+        onchange="loadFile(event)">
     <img id="jacketsOutput">
    
     <script>
         var loadFile = function(event) {
-            var image = document.getElementById('output');
+            var image = document.getElementById('jacketsOutput');
             image.src = URL.createObjectURL(event.target.files[0]);
         };
         </script>
